@@ -1,0 +1,36 @@
+<button onclick="location.href='/admin/users/save'">Novo usuário</button>
+
+
+<?php
+	if(count($users) > 0){
+ ?>
+
+<table class="table">
+    <thead>
+        <th>Login</th><th>Role</th>
+    </thead>
+    <tbody>	
+        <?php foreach($users as $user){ ?>
+        <tr>
+            <td>
+                <?php echo $user['login']; ?>
+            </td>
+            <td>
+                <?php echo $user['role']; ?>
+            </td>
+	    <td>
+		<a href="/admin/users/save/id/<?php echo $user['id'] ?>">Editar</a>
+	    </td>
+	    <td>
+		<a href="/admin/users/delete/id/<?php echo $user['id'] ?>">Excluir</a>
+	    </td>
+        </tr>
+        <?php } ?>
+    </tbody>  
+</table>
+
+<?php 
+}else{ 
+	echo "Nenhum usuário encontrado";
+}
+ ?>

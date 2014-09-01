@@ -3,7 +3,7 @@ namespace Admin\Model;
 
 use Core\Test\ModelTestCase;
 use Admin\Model\User;
-use Zend\InputFilter\InputFilterInterface;
+
 
 /**
 *@group Model

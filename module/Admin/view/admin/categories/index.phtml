@@ -1,0 +1,17 @@
+<h1>Categorias</h1>
+<button onclick="location.href='/admin/categories/save'">Novo usuário</button>
+
+<table class="table">
+    <thead>
+        <th>Descrição</th>
+    </thead>
+    <tbody>
+        <?php foreach($categories as $categorie){ ?>
+        <tr>
+            <td>
+                <?php echo $categorie['description']; ?>
+            </td>            
+        </tr>
+        <?php } ?>
+    </tbody>  
+</table>
