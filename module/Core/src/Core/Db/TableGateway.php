@@ -51,10 +51,9 @@ class TableGateway extends AbstractTableGateway
     
     public function fetchAll($order = null, $where = null, $columns = null, $limit = null, $offset = null)
     {
-        
         $select = new Select();
         $select->from($this->getTable());
-        
+
         if($order)
             $select->order($order);    
         if ($where)

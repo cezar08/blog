@@ -9,18 +9,6 @@ return array(
             'Admin\Controller\Auth' => 'Admin\Controller\AuthController',
         ),
     ),
-    'doctrine' => array(
-        'driver' => array(
-            'application_entities' => array(
-                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/Admin/Model')
-            ),
-            'orm_default' => array(
-                'drivers' => array(
-                    'Admin\Model' => 'application_entities'
-                )
-            ))),
     'router' => array(
         'routes' => array(
             'admin' => array(

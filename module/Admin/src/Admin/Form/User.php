@@ -43,7 +43,7 @@ class User extends Form {
             'options' => array(
                 'label' => 'Role*:',
                 'empty_option' => 'Selecione um perfil',
-                'value_options' => array('admin' => 'admin', 'editor' => 'editor')
+                'value_options' => array('admin' => 'admin', 'redator' => 'redator')
             ),
         ));
 
