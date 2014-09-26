@@ -1,0 +1,15 @@
+<?php foreach($posts as $post){ ?>
+<div>
+	<h3><?php echo $post['title']; ?></h3>
+	<p>
+		<?php echo $post['description']; ?>
+	</p>
+	<a href='/main/index/more/id/<?php echo $post['id']; ?>'>Mais</a>
+</div>
+<?php } ?>
+<?php
+	echo $this->paginationControl($posts,
+								'Sliding',
+								'main/partials/paginator/control.phtml'
+);
+?>

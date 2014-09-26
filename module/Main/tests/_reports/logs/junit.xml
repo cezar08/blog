@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Main Test Suite" tests="5" assertions="21" failures="0" errors="0" time="7.299045">
+    <testsuite name="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" tests="5" assertions="21" failures="0" errors="0" time="7.299045">
+      <testcase name="test404" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="30" assertions="1" time="0.992498"/>
+      <testcase name="testIndexAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="37" assertions="5" time="1.118682"/>
+      <testcase name="testIndexActionPaginator" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="53" assertions="8" time="3.181123"/>
+      <testcase name="testInvalidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="86" assertions="2" time="1.013486"/>
+      <testcase name="testValidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="93" assertions="5" time="0.993256"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,7 @@
+Main\Controller\IndexController
+ [x]  404
+ [x] Index action
+ [x] Index action paginator
+ [x] Invalid post action
+ [x] Valid post action
+

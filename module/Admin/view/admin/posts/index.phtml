@@ -1,0 +1,20 @@
+<h1>Meus posts</h1>
+<button onclick="location.href='/admin/posts/save'">Novo post</button>
+
+<table class="table">
+    <thead>
+        <th>Titulo</th><th>Mini descrição</th>
+    </thead>
+    <tbody>
+        <?php foreach($posts as $post){ ?>
+        <tr>
+            <td>
+                <?php echo $post['title']; ?>
+            </td>
+            <td>
+                <?php echo $post['description']; ?>
+            </td>
+        </tr>
+        <?php } ?>
+    </tbody>  
+</table>

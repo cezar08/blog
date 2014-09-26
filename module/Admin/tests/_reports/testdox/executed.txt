@@ -1,0 +1,81 @@
+AuthController
+ [x]  404
+ [x] Index action login form
+ [x] Login invalid method
+ [x] Login
+ [x] Logout
+
+Admin\Controller\CategoriesController
+ [x]  404
+ [x] Index action
+ [x] Save action new request
+ [x] Save action update form request
+ [x] Save action post request
+ [x] Save action invalid post request
+ [x] Invalid delete action
+ [x] Delete action
+
+Admin\Controller\PostsController
+ [x]  404
+ [x] Index action
+ [x] Save action new request
+ [x] Save action update form request
+ [x] Save action post request
+ [x] Save action invalid post request
+ [x] Invalid delete action
+ [x] Delete action
+
+Admin\Controller\UsersController
+ [x]  404
+ [x] Index action
+ [x] Save action new request
+ [x] Save action update form request
+ [x] Save action post request
+ [x] Save action invalid post request
+ [x] Invalid delete action
+ [x] Delete action
+
+Admin\Model\Categorie
+ [x] Get input filter
+ [x] Input filter valid
+ [x] Input filter invalid
+ [x] Insert
+ [x] Insert invalid
+ [x] Update
+ [x] Delete
+
+Admin\Model\PostCategorie
+ [x] Get input filter
+ [x] Input filter valid
+ [x] Input filter invalid
+ [x] Insert
+ [x] Insert invalid
+ [x] Duplicate insert invalid
+ [x] Delete
+
+Admin\Model\Post
+ [x] Get input filter
+ [x] Input filter valid
+ [x] Input filter invalid
+ [x] Insert
+ [x] Insert invalid
+ [x] Update
+ [x] Delete
+
+Admin\Model\User
+ [x] Get input filter
+ [x] Input filter valid
+ [x] Input filter invalid
+ [x] Insert
+ [x] Insert invalid
+ [x] Update
+ [x] Delete
+
+Admin\Service\Auth
+ [x] Authenticate without params
+ [x] Authenticate empty params
+ [x] Authenticate invalid parameters
+ [x] Authenticate invalid password
+ [x] Authenticate valid params
+ [x] Logout
+
