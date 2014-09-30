@@ -22,7 +22,7 @@ class Post extends Form {
                 'label' => 'Titulo*:',
             ),
             'attributes' => array(
-                'placeholder' => 'Ex: Entre com o titulo aqui'
+                'placeholder' => 'Entre com o titulo aqui'
             ),
         ));
 
@@ -37,11 +37,11 @@ class Post extends Form {
         $this->add(array(
             'type' => 'textarea',
             'name' => 'text', 
-	    'options' => array(
-                'label' => 'Descrição completa*:',
-            ),            
+            'options' => array(
+                'label' => 'Texto completo*:',
+            ),             
         ));
-	
+
         $this->add(array(
             'type' => 'MultiCheckbox',
             'name' => 'categories',

@@ -1,0 +1,23 @@
+<img src="/img/comments.png"/>Comentários:
+<?php foreach($comments as $comment){ ?>
+<div class="comment">		
+	<span class='post_in'>Comentado em: <?php echo $comment['date']; ?></span>
+	<div>
+		<span class='comment_label'><?php echo $comment['email']; ?> comentou: </span>
+		<p><?php echo $comment['description']; ?></p>
+	</div>
+</div>
+
+
+<?php 
+}
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag(); 	
+?>
+
+<script>
+	$('input[type=text]').addClass('form-control');
+	$('input[type=textarea]').addClass('form-control');		
+	$('input[type=submit]').addClass('btn btn-success');	
+</script>

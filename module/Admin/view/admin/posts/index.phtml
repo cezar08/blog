@@ -14,6 +14,12 @@
             <td>
                 <?php echo $post['description']; ?>
             </td>
+            <td>
+                <a href="/admin/posts/save/id/<?php echo $post['id']; ?>"><img src="/img/pencil.png" /></a>
+            </td>
+            <td>
+                <a href="/admin/posts/delete/id/<?php echo $post['id']; ?>"><img src="/img/cross.png" /></a>
+            </td>
         </tr>
         <?php } ?>
     </tbody>  

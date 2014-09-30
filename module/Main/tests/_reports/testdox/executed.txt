@@ -1,7 +1,24 @@
+Main\Controller\CommentsController
+ [x]  404
+ [x] Index action
+ [x] Save new request
+ [x] Save post request
+ [x] Save invalid post request
+ [x] Invalid delete action
+
 Main\Controller\IndexController
  [x]  404
  [x] Index action
  [x] Index action paginator
  [x] Invalid post action
  [x] Valid post action
+
+Main\Model\Comment
+ [x] Get input filter
+ [x] Input filter valid
+ [x] Input filter invalid
+ [x] Insert
+ [x] Insert invalid
+ [x] Update
+ [x] Delete
 

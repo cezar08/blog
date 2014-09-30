@@ -88,6 +88,18 @@ class AuthTest extends ServiceTestCase {
         $this->assertNull($savedUser);
     }
 
+    /**
+     * 
+     * @return boolean
+     */
+    public function authorize() {
+        $auth = new AuthenticationService();
+        if ($auth->hasIdentity()) {
+            return true;
+        }
+        return false;
+    }
+
     private function addUser() {
         $user = new User();
         $user->login = 'zoro';

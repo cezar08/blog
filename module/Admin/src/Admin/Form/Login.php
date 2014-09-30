@@ -28,7 +28,7 @@ class Login extends Form {
             'type' => 'password',
             'name' => 'password',
             'options' => array(
-                'label' => 'Usuário:'
+                'label' => 'Senha:'
             ),
             'attributes' => array(
                 'placeholder' => 'Entre com sua senha'

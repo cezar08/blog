@@ -6,3 +6,38 @@
 <div id="comments">
 
 </div>
+
+<script>
+
+	$.ajax({
+		type: "GET",
+		url: '/main/comments/index/id/<?php echo $post->id; ?>',
+		data: "",
+		beforeSend: function() {
+		},
+		success: function(txt) {
+			$("#comments").html(txt);
+		},
+		error: function(txt) {
+		}
+	});
+
+	function ajaxPost() {		
+		var params = $('#form').serialize();
+		$.ajax({
+			type: "POST",
+			url: '/main/comments/index/id/<?php echo $post->id; ?>',
+			data: params,
+			beforeSend: function() {
+			},
+			success: function(txt) {
+				$("#comments").html(txt);
+
+			},
+			error: function(txt) {
+			}
+		});
+
+	}
+
+</script>

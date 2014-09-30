@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Main Test Suite" tests="5" assertions="21" failures="0" errors="0" time="7.299045">
-    <testsuite name="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" tests="5" assertions="21" failures="0" errors="0" time="7.299045">
-      <testcase name="test404" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="30" assertions="1" time="0.992498"/>
-      <testcase name="testIndexAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="37" assertions="5" time="1.118682"/>
-      <testcase name="testIndexActionPaginator" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="53" assertions="8" time="3.181123"/>
-      <testcase name="testInvalidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="86" assertions="2" time="1.013486"/>
-      <testcase name="testValidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="93" assertions="5" time="0.993256"/>
+  <testsuite name="Main Test Suite" tests="18" assertions="57" failures="0" errors="0" time="20.773174">
+    <testsuite name="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" tests="6" assertions="22" failures="0" errors="0" time="7.381361">
+      <testcase name="test404" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="29" assertions="1" time="0.886934"/>
+      <testcase name="testIndexAction" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="36" assertions="5" time="1.134866"/>
+      <testcase name="testSaveNewRequest" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="52" assertions="6" time="0.884002"/>
+      <testcase name="testSavePostRequest" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="69" assertions="4" time="1.012827"/>
+      <testcase name="testSaveInvalidPostRequest" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="86" assertions="4" time="2.446428"/>
+      <testcase name="testInvalidDeleteAction" class="Main\Controller\CommentsControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/CommentsControllerTest.php" line="113" assertions="2" time="1.016304"/>
+    </testsuite>
+    <testsuite name="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" tests="5" assertions="18" failures="0" errors="0" time="6.934114">
+      <testcase name="test404" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="30" assertions="1" time="0.767799"/>
+      <testcase name="testIndexAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="37" assertions="4" time="1.065381"/>
+      <testcase name="testIndexActionPaginator" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="51" assertions="6" time="3.234833"/>
+      <testcase name="testInvalidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="82" assertions="2" time="0.893162"/>
+      <testcase name="testValidPostAction" class="Main\Controller\IndexControllerTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Controller/IndexControllerTest.php" line="89" assertions="5" time="0.972939"/>
+    </testsuite>
+    <testsuite name="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" tests="7" assertions="17" failures="0" errors="0" time="6.457698">
+      <testcase name="testGetInputFilter" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="12" assertions="1" time="0.763299"/>
+      <testcase name="testInputFilterValid" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="22" assertions="6" time="0.812728"/>
+      <testcase name="testInputFilterInvalid" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="35" assertions="1" time="0.919226"/>
+      <testcase name="testInsert" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="44" assertions="2" time="0.883365"/>
+      <testcase name="testInsertInvalid" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="55" assertions="1" time="0.747151"/>
+      <testcase name="testUpdate" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="61" assertions="3" time="1.326812"/>
+      <testcase name="testDelete" class="Main\Model\CommentTest" file="/home/cezar/workspace/php/Blog/module/Main/tests/src/Main/Model/CommentTest.php" line="79" assertions="3" time="1.005117"/>
     </testsuite>
   </testsuite>
 </testsuites>

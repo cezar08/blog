@@ -1,17 +1,6 @@
 <?php
 
-return array(
-    'image_id_seq' => array(
-        'create' => 'CREATE SEQUENCE schema_blog.image_id_seq;',
-        'drop' => 'DROP SEQUENCE schema_blog.image_id_seq CASCADE;'
-    ),
-    'image' => array(
-        'create' => "CREATE TABLE schema_blog.image (
-                id INTEGER NOT NULL DEFAULT nextval('schema_blog.image_id_seq'),
-                url VARCHAR(255) NOT NULL,
-                CONSTRAINT id_image PRIMARY KEY (id));",
-        'drop' => 'DROP TABLE schema_blog.image CASCADE;',
-    ),
+return array(   
     'user_id_seq' => array(
         'create' => 'CREATE SEQUENCE schema_blog.user_id_seq;',
         'drop' => 'DROP SEQUENCE schema_blog.user_id_seq CASCADE;'

@@ -39,6 +39,7 @@ class PostsController extends ActionController {
                 unset($data['submit']);
                 $post->setData($data);
                 $saved = $this->getTable($this->table)->save($post);
+                $this->getTable('\Admin\Model\PostCategorie')->delete($saved->id);
                 foreach($categories as $categorie){
                     $postCategorie = new \Admin\Model\PostCategorie(); 
                     $postCategorie->id_post = $saved->id;
@@ -51,7 +52,14 @@ class PostsController extends ActionController {
         $id = (int) $this->params()->fromRoute('id', 0);
         if($id > 0){
             $post = $this->getTable($this->table)->get($id);
-            $form->bind($post);            
+             $categories = $this->getTable('\Admin\Model\PostCategorie')->fetchAll(null, "id_post = $id", array('id_categorie'))->toArray();            
+            $form->bind($post); 
+            if($categories){
+                $valuesCategories = null;
+                foreach($categories as $categorie)
+                    $valuesCategories[$categorie['id_categorie']] = $categorie['id_categorie'];
+                $form->get('categories')->setValue($valuesCategories);        
+            }            
         }        
         return new ViewModel(array('form' => $form));
     }
@@ -60,7 +68,7 @@ class PostsController extends ActionController {
         $id = $this->params()->fromRoute('id', 0);
         if($id == 0)
             throw new \Exception('Código obrigatório');
-        $this->getTable('\Admin\Model\PostCategorie')->delete($id);
+        $this->getTable('\Admin\Model\PostCategorie')->delete($id);        
         $this->getTable($this->table)->delete($id);
         return $this->redirect()->toUrl('/admin/posts');
     }

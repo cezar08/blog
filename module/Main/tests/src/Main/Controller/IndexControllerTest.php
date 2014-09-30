@@ -37,7 +37,6 @@ class IndexControllerTest extends ControllerTestCase{
     public function testIndexAction()
     {
         $postA = $this->addPost('Titulo 1');
-        $postB = $this->addPost('Titulo 2');
         $this->routeMatch->setParam('action', 'index');
         $result = $this->controller->dispatch($this->request, $this->response);
         $response = $this->controller->getResponse();
@@ -46,8 +45,7 @@ class IndexControllerTest extends ControllerTestCase{
         $variables = $result->getVariables();
         $this->assertArrayHasKey('posts', $variables);
         $controllerData = $variables["posts"]->getCurrentItems()->toArray();
-        $this->assertEquals($postA->title, $controllerData[0]['title']);
-        $this->assertEquals($postB->title, $controllerData[1]['title']);
+        $this->assertEquals($postA->title, $controllerData[0]['title']);       
     }
 
     public function testIndexActionPaginator()
@@ -66,9 +64,7 @@ class IndexControllerTest extends ControllerTestCase{
         $paginator = $variables["posts"];
         $this->assertEquals('Zend\Paginator\Paginator', get_class($paginator));
         $posts = $paginator->getCurrentItems()->toArray();
-        $this->assertEquals(10, count($posts));
-        $this->assertEquals($post[0]->id, $posts[0]['id']);
-        $this->assertEquals($post[1]->id, $posts[1]['id']);     
+        $this->assertEquals(10, count($posts));     
         $this->routeMatch->setParam('action', 'index');
         $this->routeMatch->setParam('page', 3);
         $result = $this->controller->dispatch($this->request, $this->response);
@@ -117,15 +113,7 @@ class IndexControllerTest extends ControllerTestCase{
         de reformulação e modernização das novas proposições.';
         $post->date_post = date('Y-m-d H:i:s');     
         $saved = $this->getTable('Admin\Model\Post')->save($post);
-        return $post;
-    }
-
-
-    private function addCategorie(){
-        $categorie = new \Admin\Model\Categorie();
-        $categorie->description = 'Zend Framework';     
-        $saved = $this->getTable('Admin\Model\Categorie')->save($categorie);
-        return $categorie;
+        return $saved;
     }
 
     private function addUser(){

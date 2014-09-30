@@ -1,15 +1,19 @@
-<?php foreach($posts as $post){ ?>
-<div>
-	<h3><?php echo $post['title']; ?></h3>
-	<p>
-		<?php echo $post['description']; ?>
-	</p>
-	<a href='/main/index/more/id/<?php echo $post['id']; ?>'>Mais</a>
-</div>
+<?php foreach ($posts as $post) { ?>
+    <hr>
+    <div>
+        <h3><?php echo $post['title']; ?></h3>
+        <div class="panel-body">
+            <span class='post_in'>Postado por: <?php echo ucwords($post['login']) ?> <br> em: <?php echo $post['date_post']; ?></span>
+            <p>
+                <?php echo $post['description']; ?>
+            </p>	
+            <a href='/main/index/more/id/<?php echo $post['id']; ?>'>Mais</a>
+        </div>
+
+    </div>
 <?php } ?>
 <?php
-	echo $this->paginationControl($posts,
-								'Sliding',
-								'main/partials/paginator/control.phtml'
+echo $this->paginationControl($posts, 'Sliding', 
+        'main/partials/paginator/control.phtml', array('route' => 'main')
 );
 ?>

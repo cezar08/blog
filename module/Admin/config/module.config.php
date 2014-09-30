@@ -17,7 +17,7 @@ return array(
                     'route' => '/admin',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Admin\Controller',
-                        'controller' => 'Index',
+                        'controller' => 'Auth',
                         'action' => 'index',
                         'module' => 'admin'
                     ),

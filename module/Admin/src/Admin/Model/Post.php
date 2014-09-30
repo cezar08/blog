@@ -46,7 +46,7 @@ class Post extends Entity {
     protected $text;
 
     /**
-     * @var date
+     * @var datetime
      */
     protected $date_post;
 
@@ -99,7 +99,7 @@ class Post extends Entity {
                     ))
             );
 
-           $inputFilter->add(
+            $inputFilter->add(
                     $factory->createInput(array(
                         'name' => 'description',
                         'required' => true,
@@ -124,7 +124,6 @@ class Post extends Entity {
                         'name' => 'text',
                         'required' => true,
                         'filters' => array(
-                            array('name' => 'StripTags'),
                             array('name' => 'StringTrim'),    
                         ),
                         'validators' => array(

@@ -1,6 +1,7 @@
 body {
     padding-top: 60px;
     padding-bottom: 40px;
+    width: 100%;
 }
 
 .zf-green {
@@ -17,6 +18,7 @@ body {
   background-image: linear-gradient(top, #70d900, #57a900);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
 }
+
 
 .btn-success:hover,
 .btn-success:active,
@@ -35,3 +37,77 @@ div.container a.brand {
     margin-left: 0;
     padding: 8px 20px 12px 40px;
 }
+.masthead{
+    height: 288px;
+    width: 1024px;
+    margin:0px auto;
+    background-image:url("../img/coffee_banner.jpeg");
+    background-repeat:no-repeat;
+}
+
+label, input, select, textarea{
+  margin: 10px;
+}
+
+
+label, textarea{
+  width: 100%;
+}
+
+textarea{
+  height: 150px;
+}
+
+li{
+  color: red;
+}
+
+div.container{
+   width: 1024px;
+   margin:0px auto;
+}
+
+span.post_in{
+  float: right;
+  color: grey;
+  font-size: 10px;  
+}
+
+.comment_label{
+  color: grey;
+  font-size: 12px;   
+}
+
+p{
+  margin: 8px;
+}
+
+#comments{
+  margin-top: 40px; 
+}
+.comment{
+  margin-top: 20px; 
+  background-color: #D8D8D8;
+}
+
+.img{
+  width: 300px; 
+  margin:0px auto;
+}
+
+.img img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#video{
+    max-width: 400px;
+    margin:0px auto;
+}
+
+.pagination a{
+    margin-left: 5px;
+}
+
+
+

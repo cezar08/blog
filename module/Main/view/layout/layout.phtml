@@ -1,0 +1,79 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Blog ')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/style.css')
+                ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+                ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+        ?>
+
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                ->prependFile($this->basePath() . '/js/jquery.min.js')
+                ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                ->prependFile($this->basePath() . '/js/html5shiv.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+        ;
+        ?>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><?php echo 'Home' ?></a>
+                </div>                           
+                <div class="collapse navbar-collapse">                  
+                <?php if ($this->session()->offsetGet('user')) { ?>
+                      <a class="navbar-text" href="/admin/posts"><?php echo 'Meus posts' ?></a>
+                      <?php if($this->session()->offsetGet('user')->role == 'admin'){ ?>
+                      <a class="navbar-text" href="/admin/categories"><?php echo 'Categorias' ?></a>
+                      <a class="navbar-text" href="/admin/users"><?php echo 'Usuários' ?></a>
+                      <?php } ?>
+                      <a class="navbar-text" href="/admin/auth/logout"><?php echo 'Sair' ?></a>
+                <?php } ?>
+                </div>
+            </div>
+        </nav>
+        <div class="masthead"></div>
+        <div class="container">
+           <?php if ($this->session()->offsetGet('user')) { ?>
+            <span class="post_in">Autenticado como: <?php echo $this->session()->offsetGet('user')->login;  ?></span>    
+            <?php } ?>
+        <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <p>&copy; 2014 - <?php echo date('Y') ?> by Cezar Junior de Souza. <?php echo 'Todos os direitos reservados.' ?></p>
+            </footer>
+        </div> <!-- /container -->
+<?php echo $this->inlineScript() ?>
+
+        <script type="text/javascript">
+            $('input[type=text]').addClass('form-control');
+            $('input[type=password]').addClass('form-control');
+            $('input[type=textarea]').addClass('form-control');
+            $('select').addClass('form-control');
+            $('input[type=checkbox]').addClass('form-control');
+            $('input[type=submit]').addClass('btn btn-success');
+            $('button').addClass('btn');
+        </script>
+    </body>
+</html>
